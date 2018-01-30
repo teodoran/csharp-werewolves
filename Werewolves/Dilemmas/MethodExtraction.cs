@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Werewolwes.Examples
+namespace Werewolves.Dilemmas
 {
     class MethodExtraction
     {

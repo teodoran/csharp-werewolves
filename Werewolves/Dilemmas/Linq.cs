@@ -3,20 +3,22 @@ using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 
-namespace Werewolwes.Examples
+namespace Werewolves.Dilemmas
 {
-    class Linq
+    class Linq1
     {
-        /*
-         Her bør vi sikkert vise frem litt hvordan denne datastrukturen skal se ut
-             */
+        private readonly List<string> _items;
 
+        public Linq1(List<string> items)
+        {
+            _items = items;
+        }
 
-        private static string ToString1(List<string> items)
+        public override string ToString()
         {
             var result = new StringBuilder();
 
-            foreach (var item in items)
+            foreach (var item in _items)
             {
                 if(item != null && item.Contains("CX"))
                 {
@@ -26,10 +28,19 @@ namespace Werewolwes.Examples
 
             return result.ToString();
         }
+    }
 
-        private static string ToString2(List<string> items)
+    class Linq2
+    {
+        private readonly List<string> _items;
+
+        public Linq2(List<string> items){
+            _items = items;
+        }
+
+        public override string ToString()
         {
-            var result = items
+            var result = _items
                 .Where(item => item != null)
                 .Where(item => item.Contains("CX"))
                 .Aggregate(new StringBuilder(), (builder, item) => builder.Append(item));
