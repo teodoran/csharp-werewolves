@@ -1,48 +1,52 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.IO;
 
 namespace Werewolves.Dilemmas
 {
-    class Class2
+    class ExceptionHandling1 
     {
-        private dynamic _logger;
-
-        public Class2(dynamic logger){
-            _logger = logger;
-        }
-        public dynamic ThisCouldFail()
-        {
-            throw new Exception();
-        }
-
-        public dynamic HandleException1()
-        {
-            return ThisCouldFail();
-        }
-
-        public dynamic HandleException2()
-        {
-            try
-            {
-                return ThisCouldFail();
+        public void CopyFile(string fromFile, string toFile) {
+            try {
+                using(Stream fromStream = File.OpenRead(fromFile))
+                using(Stream toStream = File.OpenWrite(toFile))
+                {
+                    fromStream.CopyTo(toStream);
+                }
             }
-            catch (Exception e)
-            {
-                _logger.Log(e);
-                throw new Exception("MyException", e);
+            catch(IOException ex) {
+                var message = $"IO error while copying from {fromFile} to {toFile}.";
+                throw new IOException(message, ex);
+            }
+            catch(Exception ex) {
+                var message = $"General error while copying from {fromFile} to {toFile}.";
+                throw new IOException(message, ex);
             }
         }
+    }
 
-        public dynamic HandleException3()
-        {
-            try
-            {
-                return ThisCouldFail();
+    class ExceptionHandling2 
+    {
+        public dynamic Log {get; set;}
+
+        public void CopyFile(string fromFile, string toFile) {
+            try {
+                using(Stream fromStream = File.OpenRead(fromFile))
+                using(Stream toStream = File.OpenWrite(toFile))
+                {
+                    fromStream.CopyTo(toStream);
+                }
             }
-            catch (Exception)
-            {
-                return null;
+            catch(IOException ex) {
+                var message = $"IO error while copying from {fromFile} to {toFile}.";
+                Log.Debug(message);
+                throw new IOException(message, ex);
+            }
+            catch(Exception ex) {
+                var message = $"General error while copying from {fromFile} to {toFile}.";
+                Log.Debug(message);
+                throw new IOException(message, ex);
             }
         }
     }

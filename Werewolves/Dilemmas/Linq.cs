@@ -34,7 +34,8 @@ namespace Werewolves.Dilemmas
     {
         private readonly List<string> _items;
 
-        public Linq2(List<string> items){
+        public Linq2(List<string> items)
+        {
             _items = items;
         }
 

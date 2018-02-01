@@ -33,22 +33,18 @@ namespace Werewolves.Dilemmas
 
             foreach(var directory in directories)
             {
-                totalSize += TotalFileSizeInFiles(Directory.GetFiles(directory));
+                TotalFileSizeInFiles(Directory.GetFiles(directory), ref totalSize);
             }
             
             return totalSize;
         }
 
-        private static long TotalFileSizeInFiles(string[] files)
+        private static void TotalFileSizeInFiles(string[] files, ref long totalSize)
         {
-            long totalSize = 0;
-
             foreach(var file in files)
             {
                 totalSize += new FileInfo(file).Length;
             }
-
-            return totalSize;
         }
     }
 }
