@@ -41,22 +41,15 @@ namespace Werewolves.Dilemmas
             Console.WriteLine("Press enter for DataState:");
             Console.ReadLine();
                
-            var dataState1 = new DataState1("Teodor", "Elstad");
-            Console.WriteLine($"DataState1: {dataState1.Fullname}");
-
-            var dataState2 = new DataState2("Magnus", "Karlsson");
-            Console.WriteLine($"DataState2: {dataState2.Fullname()}\n");
+            var dataState = new DataState("Teodor", "Elstad");
+            Console.WriteLine($"DataState: {dataState.Fullname}");
 
             // Static
             Console.WriteLine("Press enter for Static:");
             Console.ReadLine();
 
-            Console.WriteLine($"DateStamp1 GetShortDateStamp(): {DateStamp1.GetShortDateStamp(DateTime.Now)}");
-            Console.WriteLine($"DateStamp1 GetLongDateStamp(): {DateStamp1.GetLongDateStamp(DateTime.Now)}");
-
-            var dateStamp2 = new DateStamp2(DateTime.Now);
-            Console.WriteLine($"DateStamp2 GetShortDateStamp(): {dateStamp2.GetShortDateStamp()}");
-            Console.WriteLine($"DateStamp2 GetLongDateStamp(): {dateStamp2.GetLongDateStamp()}\n");
+            Console.WriteLine($"DateStamp GetShortDateStamp(): {DateStamp.GetShortDateStamp(DateTime.Now)}");
+            Console.WriteLine($"DateStamp GetLongDateStamp(): {DateStamp.GetLongDateStamp(DateTime.Now)}");
 
             // Var
             Console.WriteLine("Press enter for Var:");
@@ -69,19 +62,15 @@ namespace Werewolves.Dilemmas
                 { Guid.NewGuid(), new List<string>{"monster", "frankenstein", "lightning"} }
             };
 
-            var var1 = new Var1(bookIdTagsMap);
-            Console.WriteLine($"Var1:\n{var1.ToString()}");
-
-            var var2 = new Var2(bookIdTagsMap);
-            Console.WriteLine($"Var2:\n{var2.ToString()}");
+            var var = new Var(bookIdTagsMap);
+            Console.WriteLine($"Var:\n{var.ToString()}");
 
             // MethodExtraction
             Console.WriteLine("Press enter for MethodExtraction:");
             Console.ReadLine();
 
             var dirs = new List<string> { "/" };
-            Console.WriteLine($"MethodExtraction1: {MethodExtraction1.TotalFileSizeInDirectories(dirs)}");
-            Console.WriteLine($"MethodExtraction2: {MethodExtraction2.TotalFileSizeInDirectories(dirs)}\n");
+            Console.WriteLine($"MethodExtraction: {MethodExtraction.TotalFileSizeInDirectories(dirs)}");
 
             // Linq
             Console.WriteLine("Press enter for Linq:");
@@ -94,11 +83,8 @@ namespace Werewolves.Dilemmas
                 "something CX! again"
             };
 
-            var linq1 = new Linq1(listOfCx);
-            Console.WriteLine($"Linq1: {linq1.ToString()}");
-
-            var linq2 = new Linq2(listOfCx);
-            Console.WriteLine($"Linq2: {linq2.ToString()}\n");
+            var linq = new Linq(listOfCx);
+            Console.WriteLine($"Linq: {linq.ToString()}");
 
             // ExceptionHandling
             // A running example including ExceptionHandling is left as an exercise for the reader.
