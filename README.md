@@ -29,9 +29,6 @@ Burde man gjøre de samme tingene hver gang? Alle i prosjektet?
 Er dette nytting å ha et forhold til?
 * Være bevisst på hva man velger og hvorfor.
 
-Todo
-----
-* Teodor lager ferdig slides
 
 Sample output
 -------------
