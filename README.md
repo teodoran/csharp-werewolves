@@ -6,11 +6,12 @@ _A Kahoot survey to go along with the talk can be found [here](https://play.kaho
 Talk outline
 ------------
 
-### Intro
+### Hva vil vi snakke om?
 Det er noen ting som er vanskelig å si er bedre enn andre...
 
 Det er noen valg som er riktig og galt.
 
+### Disclaimers
 Mye av dette er situasjonsbetinget, vi har laget spissede eksempler.
 Er ute etter at folk velger det de heller mot, selv om de ikke alltid ville brukt det ene eller det andre.
 
@@ -21,13 +22,45 @@ Er ute etter at folk velger det de heller mot, selv om de ikke alltid ville bruk
 4. Spør noen konkrete i salen om hva de valgte og hvorfor.
 
 ### Dilemmaer
-Vi kjører dilemmaer
+1. DataState
+2. Static
+3. Var
+4. MethodExtraction
+5. Linq
+6. (Hvis tid til overs: ExceptionHandling)
 
 ### Outro
 Burde man gjøre de samme tingene hver gang? Alle i prosjektet?
 
 Er dette nytting å ha et forhold til?
 * Være bevisst på hva man velger og hvorfor.
+
+
+Diff av dilemmaer
+-----------------
+Branchen `master` inneholder begge versjonene av alle dilemaaene. I tillegg finnes branchen `remus` og `delphine` som hver inneholder en versjon og kan diffes mot hverandre. Diffing kan gjøres på flere måter, men under er noen forslag.
+
+### Diff med VS Code
+Installer utvidelsen _Git History Diff_. Denne utvidelsen gjør en rimelig god jobb med å visualisere ulike brancher. Søk etter _GitHD_ i command palette.
+
+### Diff med Meld
+[Meld](http://meldmerge.org/) er et mer avansert diff-verktøy, og installeres som et eget verktøy.
+
+1. Installer Meld på ditt system. Bruk f.eks. `sudo apt-get install meld`.
+2. Konfigurer git til å bruke Meld som diff-verktøy: `git config --global diff.tool meld`
+3. Sjekk ut branchen delphine: `git checkout delphine`
+3. Bruk `git difftool` for å diffe delphine mot remus -branchen: `git difftool -d remus`
+
+
+Installasjon av prosjektet
+--------------------------
+Prosjektet er satt opp med dotnet core. En mulig måte å få bygget og kjørt det på er beskrevet under.
+
+1. Få fatt i en passende versjon av dotnet core
+2. Naviger deg ned i mappen csharp-werewolves/Werewolves
+3. Kjør `dotnet restore` for å laste ned avhengigheter
+4. Kjør `dotnet build` for å bygge prosjektet
+5. Kjør `dotnet run` for å kjøre terminalapplikasjonen som lages
 
 
 Sample output
