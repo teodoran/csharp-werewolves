@@ -1,6 +1,7 @@
 csharp-werewolves
 =================
 _Code examples to go along with the talk ".NET - A guide to facing werewolves without silver bullets"._
+_Cx employees can find [the slides here](https://docs.google.com/presentation/d/1TuTN5yLEkUbHtyRPEBdkWV005HYusB1z57yapehd8Xs/edit?usp=sharing)_
 _A Kahoot survey to go along with the talk can be found [here](https://play.kahoot.it/#/k/99986548-d14e-44ec-9fa1-22ebc99c8636)._
 
 Talk outline
