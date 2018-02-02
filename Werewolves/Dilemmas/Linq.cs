@@ -16,15 +16,10 @@ namespace Werewolves.Dilemmas
 
         public override string ToString()
         {
-            var result = new StringBuilder();
-
-            foreach (var item in _items)
-            {
-                if(item != null && item.Contains("CX"))
-                {
-                    result.Append(item);
-                }
-            }
+            var result = _items
+                .Where(item => item != null)
+                .Where(item => item.Contains("CX"))
+                .Aggregate(new StringBuilder(), (builder, item) => builder.Append(item));
 
             return result.ToString();
         }

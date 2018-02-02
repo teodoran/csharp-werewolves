@@ -42,14 +42,15 @@ namespace Werewolves.Dilemmas
             Console.ReadLine();
                
             var dataState = new DataState("Teodor", "Elstad");
-            Console.WriteLine($"DataState: {dataState.Fullname}");
+            Console.WriteLine($"DataState: {dataState.Fullname()}");
 
             // Static
             Console.WriteLine("Press enter for Static:");
             Console.ReadLine();
 
-            Console.WriteLine($"DateStamp GetShortDateStamp(): {DateStamp.GetShortDateStamp(DateTime.Now)}");
-            Console.WriteLine($"DateStamp GetLongDateStamp(): {DateStamp.GetLongDateStamp(DateTime.Now)}");
+            var dateStamp = new DateStamp(DateTime.Now);
+            Console.WriteLine($"DateStamp GetShortDateStamp(): {dateStamp.GetShortDateStamp()}");
+            Console.WriteLine($"DateStamp GetLongDateStamp(): {dateStamp.GetLongDateStamp()}");
 
             // Var
             Console.WriteLine("Press enter for Var:");

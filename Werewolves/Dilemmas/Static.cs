@@ -2,19 +2,25 @@
 
 namespace Werewolves.Dilemmas
 {
-    public static class DateStamp
+    public class DateStamp
     {
+        private readonly DateTime _date;
 
-        public static string GetShortDateStamp(DateTime date)
+        public DateStamp(DateTime date)
         {
-            var result = date.ToString("dd-MM-yyyy");
-            
+            _date = date;
+        }
+
+        public string GetShortDateStamp()
+        {
+            var result = _date.ToString("dd-MM-yyyy");
+
             return result;
         }
 
-        public static string GetLongDateStamp(DateTime date)
+        public string GetLongDateStamp()
         {
-            var dateString = date.ToString("dd-MM-yyyy HH:mm");
+            var dateString = _date.ToString("dd-MM-yyyy HH:mm");
             var result = $"MY_SILVER_BULLET_STAMP: {dateString}";
 
             return result;

@@ -11,15 +11,20 @@ namespace Werewolves.Dilemmas
         {
             long totalSize = 0;
 
-            foreach(var directory in directories)
+            foreach (var directory in directories)
             {
-                foreach(var file in Directory.GetFiles(directory))
-                {
-                    totalSize += new FileInfo(file).Length;
-                }
+                TotalFileSizeInFiles(Directory.GetFiles(directory), ref totalSize);
             }
-            
+
             return totalSize;
+        }
+
+        private static void TotalFileSizeInFiles(string[] files, ref long totalSize)
+        {
+            foreach (var file in files)
+            {
+                totalSize += new FileInfo(file).Length;
+            }
         }
     }
 }

@@ -15,9 +15,9 @@ namespace Werewolves.Dilemmas
 
         public override string ToString()
         {
-            var result = new StringBuilder();
+            StringBuilder result = new StringBuilder();
 
-            foreach(var tags in _bookIdTagsMap)
+            foreach (KeyValuePair<Guid, List<string>> tags in _bookIdTagsMap)
             {
                 result.Append(string.Join(", ", tags.Value));
                 result.Append(Environment.NewLine);
