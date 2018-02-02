@@ -32,3 +32,71 @@ Er dette nytting å ha et forhold til?
 Todo
 ----
 * Teodor lager ferdig slides
+
+Sample output
+-------------
+
+```
+/csharp-werewolves/Werewolves> dotnet run
+Beware of Werewolves... Press enter to continue.
+Press enter to continue.
+
+
+      /^\      /^\
+      |  \    /  |
+      ||\ \../ /||
+      )'        `(
+     ,;`w,    ,w';,
+     ;,  ) __ (  ,;
+      ;  \(\/)/  ;;
+     ;|  |vwwv|    ``-...
+      ;  `lwwl'   ;      ```''-.
+     ;| ; `"' ; ;              `.
+      ;         ,   ,          , |
+      '  ;      ;   l    .     | |
+      ;    ,  ,    |,-,._|      \;
+       ;  ; `' ;   '    \ `\     \;
+       |  |    |  |     |   |    |;
+       |  ;    ;  |      \   \   (;
+       | |      | l       | | \  |
+       | |      | |       | |  ) |
+       | |      | ;       | |  | |
+       ; ,      : ,      ,_.'  | |
+      :__'      | |           ,_.'
+               `--'
+Press enter for DataState:
+
+DataState1: Teodor Elstad
+DataState2: Magnus Karlsson
+
+Press enter for Static:
+
+DateStamp1 GetShortDateStamp(): 02-02-2018
+DateStamp1 GetLongDateStamp(): MY_SILVER_BULLET_STAMP: 02-02-2018 03:15
+DateStamp2 GetShortDateStamp(): 02-02-2018
+DateStamp2 GetLongDateStamp(): MY_SILVER_BULLET_STAMP: 02-02-2018 03:15
+
+Press enter for Var:
+
+Var1:
+triller, teens, werewolves, vampires
+insect, teleportation
+monster, frankenstein, lightning
+
+Var2:
+triller, teens, werewolves, vampires
+insect, teleportation
+monster, frankenstein, lightning
+
+Press enter for MethodExtraction:
+
+MethodExtraction1: 122
+MethodExtraction2: 122
+
+Press enter for Linq:
+
+Linq1: something CX! somethingsomething CX! again
+Linq2: something CX! somethingsomething CX! again
+
+/csharp-werewolves/Werewolves>
+```
