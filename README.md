@@ -1,6 +1,7 @@
 csharp-werewolves
 =================
-_Code examples to go along with the talk ".NET - A guide to facing werewolves without silver bullets"_
+_Code examples to go along with the talk ".NET - A guide to facing werewolves without silver bullets"._
+_A Kahoot survey to go along with the talk can be found [here](https://play.kahoot.it/#/k/99986548-d14e-44ec-9fa1-22ebc99c8636)._
 
 Talk outline
 ------------
@@ -31,6 +32,3 @@ Er dette nytting å ha et forhold til?
 Todo
 ----
 * Teodor lager ferdig slides
-* Magnus lager MethodExtraction
-* Magnus ser på Exception eller noe som er mere spennende
-* Teodor lager ferdig kahoot
