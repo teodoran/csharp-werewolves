@@ -73,7 +73,15 @@ namespace Werewolves.Dilemmas
             Console.WriteLine($"Var1:\n{var1.ToString()}");
 
             var var2 = new Var2(bookIdTagsMap);
-            Console.WriteLine($"Var2:\n{var2.ToString()}\n");
+            Console.WriteLine($"Var2:\n{var2.ToString()}");
+
+            // MethodExtraction
+            Console.WriteLine("Press enter for MethodExtraction:");
+            Console.ReadLine();
+
+            var dirs = new List<string> { "/" };
+            Console.WriteLine($"MethodExtraction1: {MethodExtraction1.TotalFileSizeInDirectories(dirs)}");
+            Console.WriteLine($"MethodExtraction2: {MethodExtraction2.TotalFileSizeInDirectories(dirs)}\n");
 
             // Linq
             Console.WriteLine("Press enter for Linq:");
@@ -92,11 +100,8 @@ namespace Werewolves.Dilemmas
             var linq2 = new Linq2(listOfCx);
             Console.WriteLine($"Linq2: {linq2.ToString()}\n");
 
-            // MethodExtraction
-            // TODO
-
             // ExceptionHandling
-            // TODO
+            // A running example including ExceptionHandling is left as an exercise for the reader.
         }
     }
 }
