@@ -7,7 +7,6 @@ namespace Werewolves.Dilemmas
 {
     class MethodExtraction1
     {
-
         public static long TotalFileSizeInDirectories(List<string> directories)
         {
             long totalSize = 0;
@@ -26,7 +25,6 @@ namespace Werewolves.Dilemmas
 
     class MethodExtraction2
     {
-
         public static long TotalFileSizeInDirectories(List<string> directories)
         {
             long totalSize = 0;
