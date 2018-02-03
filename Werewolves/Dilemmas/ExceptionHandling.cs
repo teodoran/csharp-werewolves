@@ -21,7 +21,7 @@ namespace Werewolves.Dilemmas
             }
             catch(Exception ex) {
                 var message = $"General error while copying from {fromFile} to {toFile}.";
-                throw new IOException(message, ex);
+                throw new Exception(message, ex);
             }
         }
     }
@@ -46,7 +46,7 @@ namespace Werewolves.Dilemmas
             catch(Exception ex) {
                 var message = $"General error while copying from {fromFile} to {toFile}.";
                 Log.Debug(message);
-                throw new IOException(message, ex);
+                throw new Exception(message, ex);
             }
         }
     }
